@@ -38,6 +38,7 @@ class Trending extends React.Component {
       <div id="trending">
         <div className="trending-image-container">
           <img
+            alt=""
             className="trending-image"
             src={imgBaseUrl + "w1280" + this.state.trending.backdrop_path}
           />

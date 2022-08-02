@@ -49,7 +49,10 @@ const Cluster = () => {
                   className="individual-cluster-image"
                   to={`/result/${film.type}/${film.id}`}
                 >
-                  <img src={imgBaseUrl + "w300" + film.poster_path}></img>
+                  <img
+                    alt=""
+                    src={imgBaseUrl + "w300" + film.poster_path}
+                  ></img>
                 </Link>
               </li>
             );

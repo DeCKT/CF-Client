@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 
@@ -15,7 +15,6 @@ import Cluster from "./pages/Cluster";
 
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
-import Loading from "./pages/Loading";
 
 const backendHost = "https://clusterfilm.herokuapp.com";
 

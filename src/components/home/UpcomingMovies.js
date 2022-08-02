@@ -146,6 +146,7 @@ class UpcomingMovies extends React.Component {
                 <li className="upcoming-container" key={movie.id}>
                   <div className="upcoming-img-container">
                     <img
+                      alt=""
                       className="upcoming-img"
                       src={imgBaseUrl + "w300" + movie.poster_path}
                     />
@@ -168,6 +169,7 @@ class UpcomingMovies extends React.Component {
                             <li className="actor-container" key={actor.id}>
                               <div className="actor-img-container">
                                 <img
+                                  alt=""
                                   className="actor-img"
                                   src={imgBaseUrl + "w200" + actor.profile_path}
                                 />

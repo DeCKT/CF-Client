@@ -8,7 +8,7 @@ function Profile() {
   return (
     <div id="profile">
       <div className="profile-image">
-        <img className="profile-picture" src={user.picture} />
+        <img alt="" className="profile-picture" src={user.picture} />
       </div>
       <div className="profile-details">
         <h1>{user.name}</h1>

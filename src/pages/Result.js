@@ -192,9 +192,9 @@ function Result(props) {
       </div>
 
       {pageResult.poster_path ? (
-        <img src={imgBaseUrl + "w400" + pageResult.poster_path} />
+        <img alt="" src={imgBaseUrl + "w400" + pageResult.poster_path} />
       ) : pageResult.profile_path ? (
-        <img src={imgBaseUrl + "w400" + pageResult.profile_path} />
+        <img alt="" src={imgBaseUrl + "w400" + pageResult.profile_path} />
       ) : null}
     </div>
   );

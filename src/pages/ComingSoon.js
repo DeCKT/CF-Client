@@ -62,6 +62,7 @@ class ComingSoon extends React.Component {
                     </span>
                   </div>
                   <img
+                    alt=""
                     className="coming-soon-image"
                     src={
                       movie.poster_path
@@ -87,6 +88,7 @@ class ComingSoon extends React.Component {
                     </span>
                   </div>
                   <img
+                    alt=""
                     className="coming-soon-image"
                     src={
                       show.poster_path

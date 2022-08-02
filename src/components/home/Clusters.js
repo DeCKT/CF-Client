@@ -58,7 +58,10 @@ class Clusters extends React.Component {
                     {cluster.films.map((film) => {
                       return (
                         <li key={film.id} className="cluster-film-image">
-                          <img src={imgBaseUrl + "w300" + film.poster_path} />
+                          <img
+                            alt=""
+                            src={imgBaseUrl + "w300" + film.poster_path}
+                          />
                         </li>
                       );
                     })}

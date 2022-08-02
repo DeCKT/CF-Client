@@ -53,6 +53,7 @@ class Search extends React.Component {
               >
                 <Link to={"/result/" + result.media_type + "/" + result.id}>
                   <img
+                    alt=""
                     className="search-result-image"
                     src={
                       result.poster_path || result.profile_path

@@ -91,7 +91,7 @@ class FollowingClusters extends React.Component {
                 {cluster.films.map((film) => {
                   return (
                     <li className="following-film-image">
-                      <img src={imgBaseUrl + "w200" + film.image_path} />
+                      <img alt="" src={imgBaseUrl + "w200" + film.image_path} />
                     </li>
                   );
                 })}

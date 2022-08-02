@@ -39,7 +39,10 @@ class MyClusters extends React.Component {
                       {cluster.films.slice(0, 6).map((film) => {
                         return (
                           <li className="my-cluster-film" key={film.id}>
-                            <img src={imgBaseUrl + "w200" + film.poster}></img>
+                            <img
+                              alt=""
+                              src={imgBaseUrl + "w200" + film.poster}
+                            ></img>
                           </li>
                         );
                       })}
