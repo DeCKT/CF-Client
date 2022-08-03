@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 import { NavLink } from "react-router-dom";
 import Login from "./Login";
@@ -10,7 +10,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 function NavBar() {
   const [searchOpen, setSearchOpen] = useState(false);
 
-  const { isAuthenticated, user } = useAuth0();
+  const { isAuthenticated } = useAuth0();
 
   const closeSearchResults = () => {
     setSearchOpen(false);

@@ -1,10 +1,7 @@
 import React from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
 
 const imgBaseUrl = "https://image.tmdb.org/t/p/";
-
-const backendHost = "https://clusterfilm.herokuapp.com";
 
 class Clusters extends React.Component {
   constructor() {
@@ -29,7 +26,7 @@ class Clusters extends React.Component {
                       <h2>{cluster.title}</h2>
                     </li>
                     <li className="cluster-info-creator">
-                      by <a href="">{cluster.creator}</a>
+                      by <div>{cluster.creator}</div>
                     </li>
                     <li>{cluster.films.length} films</li>
                   </ul>
