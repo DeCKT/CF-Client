@@ -15,13 +15,11 @@ const Cluster = () => {
 
   useEffect(() => {
     const getCluster = async (id) => {
-      let cluster = await axios
-        .get(`${backendHost}/cluster/${id}`)
-        .then((resp) => {
-          setCluster(resp.data);
-          setLoading(false);
-          console.log(resp.data);
-        });
+      await axios.get(`${backendHost}/cluster/${id}`).then((resp) => {
+        setCluster(resp.data);
+        setLoading(false);
+        console.log(resp.data);
+      });
     };
 
     if (!cluster) {

@@ -73,7 +73,7 @@ function Result(props) {
       setOldParams(params.result_id);
       getResult(params.type, params.result_id);
     }
-  });
+  }, [params, oldParams, pageResult]);
 
   if (!pageResult) {
     return <Loading />;
@@ -120,7 +120,7 @@ function Result(props) {
           <p className="result-overview">{pageResult.overview}</p>
         ) : null}
 
-        {pageResult.type == "tv" || pageResult.type == "movie" ? (
+        {pageResult.type === "tv" || pageResult.type === "movie" ? (
           <div className="add-to-container">
             <button
               className="add-to-button action-button"

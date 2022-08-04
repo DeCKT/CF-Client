@@ -1,5 +1,4 @@
 import React from "react";
-import axios from "axios";
 
 import movies from "../../requests/movies";
 
@@ -9,24 +8,6 @@ import Loading from "../../pages/Loading";
 import AddToCluster from "../AddToCluster";
 
 const imgBaseUrl = "https://image.tmdb.org/t/p/";
-
-const backendHost = "https://clusterfilm.herokuapp.com";
-
-const addCluster = async (email, title, film) => {
-  let newCluster = axios.post(`${backendHost}/cluster/new`, {
-    email: email,
-    title: title,
-  });
-  let clusterId = (await newCluster).data.insertedId;
-  axios.put(`${backendHost}/cluster/${clusterId}/add/${film.id}`, film);
-};
-
-const addFilmToCluster = async (film, clusterId) => {
-  console.log(`Film: `);
-  console.log(film);
-  console.log(`Cluster: ${clusterId}`);
-  axios.put(`${backendHost}/cluster/${clusterId}/add/${film.id}`, film);
-};
 
 class UpcomingMovies extends React.Component {
   constructor(props) {
@@ -128,7 +109,7 @@ class UpcomingMovies extends React.Component {
                   key={movie.id}
                   className={
                     "movie-selector " +
-                    (this.state.selectedIndex == index ? "selected" : "")
+                    (this.state.selectedIndex === index ? "selected" : "")
                   }
                   onClick={() => {
                     this.setState({ selectedIndex: index });
