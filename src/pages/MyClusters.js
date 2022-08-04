@@ -19,6 +19,7 @@ class MyClusters extends React.Component {
   async componentDidMount() {}
 
   render() {
+    console.log(this.props);
     return (
       <div id="my-clusters">
         <ul className="my-clusters-container">
@@ -36,12 +37,13 @@ class MyClusters extends React.Component {
                     className="my-cluster-film-container-link"
                   >
                     <ul className="my-cluster-film-container">
+                      {console.log(cluster.films)}
                       {cluster.films.slice(0, 6).map((film) => {
                         return (
                           <li className="my-cluster-film" key={film.id}>
                             <img
                               alt=""
-                              src={imgBaseUrl + "w200" + film.poster}
+                              src={imgBaseUrl + "w200" + film.poster_path}
                             ></img>
                           </li>
                         );
