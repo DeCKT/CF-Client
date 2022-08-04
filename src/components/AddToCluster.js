@@ -58,6 +58,7 @@ function AddToCluster(props) {
                   <li
                     key={cluster.title}
                     onClick={() => {
+                      props.film.type = props.type;
                       addFilmToCluster(cluster._id, props.film);
                       toggleAdder();
                     }}

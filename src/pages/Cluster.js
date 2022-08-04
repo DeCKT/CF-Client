@@ -41,6 +41,7 @@ const Cluster = () => {
       <div className="individual-cluster-film-scroller">
         <ul className="individual-cluster-film-container">
           {cluster.films.map((film) => {
+            console.log(film);
             return (
               <li>
                 <Link
