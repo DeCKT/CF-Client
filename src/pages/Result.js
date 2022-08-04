@@ -80,11 +80,13 @@ function Result(props) {
         ) : null}
 
         {params.type === "tv" || params.type === "movie" ? (
-          <AddToCluster
-            type={params.type}
-            film={pageResult}
-            userEmail={props.userEmail}
-          />
+          <div className="action-button-container">
+            <AddToCluster
+              type={params.type}
+              film={pageResult}
+              userEmail={props.userEmail}
+            />
+          </div>
         ) : null}
       </div>
 
