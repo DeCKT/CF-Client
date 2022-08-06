@@ -18,12 +18,14 @@ export const cluster = {
     return inserted;
   },
   add: async function (clusterId, film) {
-    let addFilm = axios.put(`${backendHost}/${clusterId}/add/${film.id}`, film);
-    let inserted = await addFilm;
-    console.log(inserted);
+    let addFilm = axios.patch(
+      `${backendHost}/${clusterId}/add/${film.id}`,
+      film
+    );
+    await addFilm;
   },
   remove: async function (clusterId, filmId) {
-    let removed = axios.put(`${backendHost}/${clusterId}/remove/${filmId}`);
+    let removed = axios.patch(`${backendHost}/${clusterId}/remove/${filmId}`);
     console.log(await removed);
   },
   delete: async function (clusterId) {

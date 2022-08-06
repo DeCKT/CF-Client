@@ -38,7 +38,9 @@ class Search extends React.Component {
             placeholder="Search..."
             className="search-input"
             onChange={(e) => {
-              this.searchDB(e.target.value);
+              if (e.target.value.length > 0) {
+                this.searchDB(e.target.value);
+              }
             }}
           />
         </div>

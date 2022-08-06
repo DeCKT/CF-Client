@@ -22,7 +22,7 @@ class MyClusters extends React.Component {
     return (
       <div id="my-clusters">
         <ul className="my-clusters-container">
-          {this.props.userClusters.length > 0 ? (
+          {this.props.userClusters ? (
             this.props.userClusters.map((cluster) => {
               return (
                 <li className="my-cluster-container" key={cluster.title}>
