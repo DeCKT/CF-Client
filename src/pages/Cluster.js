@@ -41,12 +41,17 @@ const Cluster = () => {
       <div className="individual-cluster-film-scroller">
         <ul className="individual-cluster-film-container">
           {cluster.films.map((film) => {
-            console.log(film);
+            let resultType;
+            if (film.type === "tv" || film.seasons) {
+              resultType = "tv";
+            } else if (film.type === "movie") {
+              resultType = "movie";
+            }
             return (
               <li>
                 <Link
                   className="individual-cluster-image"
-                  to={`/result/${film.type}/${film.id}`}
+                  to={`/result/${resultType}/${film.id}`}
                 >
                   <img
                     alt=""
