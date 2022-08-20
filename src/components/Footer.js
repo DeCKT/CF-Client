@@ -4,10 +4,7 @@ class Footer extends React.Component {
   render() {
     return (
       <div className="footer-container">
-        <a
-          href="https://github.com/DeCKT/clusterfilm"
-          style={{ color: "#fff" }}
-        >
+        <a href="https://github.com/DeCKT/CF-Client" style={{ color: "#fff" }}>
           GitHub Repo
         </a>
         <div>Developed by Daniel Eckton - 2022</div>

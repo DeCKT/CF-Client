@@ -146,6 +146,7 @@ table {
 /* * * * * * * END RESET * * * * * * */
 
 /* global stuff */
+
 a {
   text-decoration: none;
   color: var(--subtle-secondary-color);
@@ -357,7 +358,8 @@ nav {
 .actors-container {
   display: flex;
   flex-flow: row;
-  margin-bottom: 12px;
+  gap: 4px;
+  padding-bottom: 8px;
 }
 
 .actor-container {
@@ -367,6 +369,7 @@ nav {
   font-size: 0.7rem;
   width: 75px;
   text-align: center;
+  flex-shrink: 0;
 }
 
 .actor-img-container {
@@ -380,6 +383,21 @@ nav {
 .actor-img {
   width: 100%;
   margin-top: -8px;
+}
+
+.scrolling-container {
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.scrolling-container::-webkit-scrollbar {
+  height: 10px;
+}
+
+.scrolling-container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--main-color);
 }
 
 .action-button-container {
@@ -824,10 +842,15 @@ nav {
 
 /* result things  */
 #result {
-  padding: 35px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.result-content {
+  padding: 35px 0 35px 35px;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  flex: 1 0 auto;
+  width: 100%;
 }
 
 .result-info {
@@ -836,6 +859,8 @@ nav {
   justify-content: center;
   padding: 4rem;
   gap: 6px;
+  position: relative;
+  max-width: calc(100% - (600px - 35px));
 }
 
 .result-info h1 {
