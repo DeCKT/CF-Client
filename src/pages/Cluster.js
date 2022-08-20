@@ -18,7 +18,6 @@ const Cluster = () => {
       await axios.get(`${backendHost}/cluster/${id}`).then((resp) => {
         setCluster(resp.data);
         setLoading(false);
-        console.log(resp.data);
       });
     };
 

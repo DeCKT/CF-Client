@@ -20,12 +20,10 @@ function Result(props) {
     const getResult = async (type, id) => {
       setPageResult(await result.get(type, id));
       if (type === "tv") {
-        console.log(await tv.credits(id));
         setResultCredits(await tv.credits(id));
       } else if (type === "movie") {
         setResultCredits(await movies.cast(id));
       }
-      console.log(await result.get(type, id));
     };
 
     const paramsUpdated = (params) => {
@@ -100,7 +98,6 @@ function Result(props) {
             <div className="scrolling-container">
               <ul className="actors-container">
                 {resultCredits.map((actor) => {
-                  console.log(actor);
                   return (
                     <li className="actor-container" key={actor.id}>
                       <div className="actor-img-container">

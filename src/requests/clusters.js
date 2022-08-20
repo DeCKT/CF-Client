@@ -14,7 +14,6 @@ export const cluster = {
       title: title,
     });
     let inserted = (await newCluster).data.insertedId;
-    console.log(`Inserted new Cluster with id ${inserted}`);
     return inserted;
   },
   add: async function (clusterId, film) {
@@ -26,10 +25,8 @@ export const cluster = {
   },
   remove: async function (clusterId, filmId) {
     let removed = axios.patch(`${backendHost}/${clusterId}/remove/${filmId}`);
-    console.log(await removed);
   },
   delete: async function (clusterId) {
     let deleted = axios.delete(`${backendHost}/${clusterId}`);
-    console.log(await deleted);
   },
 };

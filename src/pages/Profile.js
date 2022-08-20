@@ -4,7 +4,6 @@ import Logout from "../components/Logout";
 
 function Profile() {
   const { user } = useAuth0();
-  console.log(user);
   return (
     <div id="profile">
       <div className="profile-image">

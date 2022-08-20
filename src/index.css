@@ -157,6 +157,10 @@ a:visited {
   color: var(--subtle-secondary-color);
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 button:focus {
   outline: none;
 }
@@ -205,6 +209,10 @@ nav {
 
 .right-align {
   margin-left: auto;
+}
+
+.search-button:hover {
+  cursor: pointer;
 }
 
 .navbar-item a,
