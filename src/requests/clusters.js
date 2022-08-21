@@ -25,8 +25,10 @@ export const cluster = {
   },
   remove: async function (clusterId, filmId) {
     let removed = axios.patch(`${backendHost}/${clusterId}/remove/${filmId}`);
+    await removed;
   },
   delete: async function (clusterId) {
     let deleted = axios.delete(`${backendHost}/${clusterId}`);
+    await deleted;
   },
 };
