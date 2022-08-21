@@ -55,6 +55,9 @@ const Cluster = () => {
                   <img
                     alt=""
                     src={imgBaseUrl + "w300" + film.poster_path}
+                    onError={({ currentTarget }) => {
+                      currentTarget.src = "/no-img.svg";
+                    }}
                   ></img>
                 </Link>
               </li>

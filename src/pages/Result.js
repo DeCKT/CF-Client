@@ -51,11 +51,23 @@ function Result(props) {
       <div className="result-content">
         {pageResult.poster_path ? (
           <div className="result-image-container">
-            <img alt="" src={imgBaseUrl + "w400" + pageResult.poster_path} />
+            <img
+              alt=""
+              src={imgBaseUrl + "w400" + pageResult.poster_path}
+              onError={({ currentTarget }) => {
+                currentTarget.src = "/no-img.svg";
+              }}
+            />
           </div>
         ) : pageResult.profile_path ? (
           <div className="result-image-container">
-            <img alt="" src={imgBaseUrl + "w400" + pageResult.profile_path} />
+            <img
+              alt=""
+              src={imgBaseUrl + "w400" + pageResult.profile_path}
+              onError={({ currentTarget }) => {
+                currentTarget.src = "/no-img.svg";
+              }}
+            />
           </div>
         ) : null}
 
@@ -105,6 +117,9 @@ function Result(props) {
                           alt=""
                           className="actor-img"
                           src={imgBaseUrl + "w200" + actor.profile_path}
+                          onError={({ currentTarget }) => {
+                            currentTarget.src = "/no-img.svg";
+                          }}
                         />
                       </div>
                       <span>{actor.name}</span>

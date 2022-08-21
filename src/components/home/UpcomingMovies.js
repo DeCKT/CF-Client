@@ -130,6 +130,9 @@ class UpcomingMovies extends React.Component {
                       alt=""
                       className="upcoming-img"
                       src={imgBaseUrl + "w300" + movie.poster_path}
+                      onError={({ currentTarget }) => {
+                        currentTarget.src = "/no-img.svg";
+                      }}
                     />
                   </div>
                   <div className="upcoming-info-container">
@@ -153,6 +156,9 @@ class UpcomingMovies extends React.Component {
                                   alt=""
                                   className="actor-img"
                                   src={imgBaseUrl + "w200" + actor.profile_path}
+                                  onError={({ currentTarget }) => {
+                                    currentTarget.src = "/no-img.svg";
+                                  }}
                                 />
                               </div>
                               <span>{actor.name}</span>

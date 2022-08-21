@@ -41,6 +41,9 @@ class Trending extends React.Component {
             alt=""
             className="trending-image"
             src={imgBaseUrl + "w1280" + this.state.trending.backdrop_path}
+            onError={({ currentTarget }) => {
+              currentTarget.src = "/no-img.svg";
+            }}
           />
         </div>
         <h1 className="trending-title">{this.state.trending.name}</h1>

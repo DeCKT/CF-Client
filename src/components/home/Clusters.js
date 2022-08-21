@@ -58,6 +58,9 @@ class Clusters extends React.Component {
                           <img
                             alt=""
                             src={imgBaseUrl + "w300" + film.poster_path}
+                            onError={({ currentTarget }) => {
+                              currentTarget.src = "/no-img.svg";
+                            }}
                           />
                         </li>
                       );

@@ -7,7 +7,14 @@ function Profile() {
   return (
     <div id="profile">
       <div className="profile-image">
-        <img alt="" className="profile-picture" src={user.picture} />
+        <img
+          alt=""
+          className="profile-picture"
+          src={user.picture}
+          onError={({ currentTarget }) => {
+            currentTarget.src = "/no-img.svg";
+          }}
+        />
       </div>
       <div className="profile-details">
         <h1>{user.name}</h1>
