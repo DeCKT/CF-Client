@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const backendPath = "https://clusterfilm.herokuapp.com/movies";
+const backendPath = "https://cf-server-xyq1.onrender.com/movies";
 
 export const movies = {
   upcoming: async function () {

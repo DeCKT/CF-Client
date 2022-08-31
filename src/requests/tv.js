@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const backendPath = "https://clusterfilm.herokuapp.com/tv";
+const backendPath = "https://cf-server-xyq1.onrender.com/tv";
 
 export const tv = {
   credits: async function (id) {
