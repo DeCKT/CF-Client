@@ -342,7 +342,7 @@ nav {
 
 .upcoming-info {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   margin: auto;
 }
 
@@ -518,7 +518,7 @@ nav {
 
 .upcoming-menu {
   position: absolute;
-  width: 50%;
+  width: 40vw;
   height: calc(100vh - 2.2rem);
 }
 
@@ -956,8 +956,41 @@ nav {
   }
 }
 
-@media only screen and (max-width: 735px) {
+@media only screen and (max-width: 935px) {
   .upcoming-container {
     flex-direction: column;
+  }
+
+  .upcoming-img-container {
+    max-width: 100%;
+    padding: 20px 0;
+    padding-bottom: 50px;
+  }
+
+  #upcoming {
+    height: auto;
+  }
+
+  .upcoming-menu {
+    width: 100%;
+    height: calc(25vw * (3 / 2) + 100px);
+  }
+
+  .menu-selector {
+    bottom: 20px;
+  }
+
+  .movie-selector {
+    height: 15px;
+    width: 15px;
+  }
+
+  .upcoming-info {
+    box-sizing: border-box;
+    padding: 0 10px;
+  }
+
+  .upcoming-info-container {
+    padding: 30px 0;
   }
 }

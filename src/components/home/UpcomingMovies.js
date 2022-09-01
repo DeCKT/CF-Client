@@ -148,7 +148,7 @@ class UpcomingMovies extends React.Component {
                         })}
                       </ul>
                       <ul className="actors-container">
-                        {movie.cast.slice(0, 5).map((actor) => {
+                        {movie.cast.slice(0, 6).map((actor) => {
                           return (
                             <li className="actor-container" key={actor.id}>
                               <div className="actor-img-container">
