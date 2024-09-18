@@ -706,7 +706,7 @@ nav {
 .coming-soon-container {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   row-gap: 35px;
 }
 
@@ -716,6 +716,7 @@ nav {
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   transition-duration: 0.2s;
+  min-width: 393px;
 }
 
 .coming-soon-film:hover {
@@ -747,6 +748,7 @@ nav {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .my-cluster-container {
@@ -957,8 +959,24 @@ nav {
 }
 
 @media only screen and (max-width: 935px) {
-  .upcoming-container {
+  .upcoming-container,
+  .result-content {
     flex-direction: column;
+  }
+
+  .result-content {
+    padding: 0;
+  }
+
+  .result-image-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 35px;
+  }
+
+  .result-info {
+    max-width: 100%;
   }
 
   .upcoming-img-container {

@@ -6,7 +6,7 @@ import Loading from "../../pages/Loading";
 
 const imgBaseUrl = "https://image.tmdb.org/t/p/";
 
-const backendHost = "https://cf-server-xyq1.onrender.com";
+const backendHost = "https://clusterfilm-server.vercel.app";
 
 class Search extends React.Component {
   constructor(props) {

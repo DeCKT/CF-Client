@@ -5,7 +5,7 @@ import moment from "moment";
 import { Link } from "react-router-dom";
 import Loading from "./Loading";
 
-const backendHost = "https://cf-server-xyq1.onrender.com";
+const backendHost = "https://clusterfilm-server.vercel.app";
 
 const imgBaseUrl = "https://image.tmdb.org/t/p/";
 

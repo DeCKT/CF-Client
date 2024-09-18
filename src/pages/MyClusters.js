@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const backendHost = "https://cf-server-xyq1.onrender.com";
+const backendHost = "https://clusterfilm-server.vercel.app";
 
 const imgBaseUrl = "https://image.tmdb.org/t/p/";
 

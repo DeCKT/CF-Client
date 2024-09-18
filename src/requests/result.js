@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const backendPath = "https://cf-server-xyq1.onrender.com/search";
+const backendHost = "https://clusterfilm-server.vercel.app/search";
 
 export const result = {
   get: async function (type, id) {

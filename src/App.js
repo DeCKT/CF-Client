@@ -16,7 +16,7 @@ import Cluster from "./pages/Cluster";
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
 
-const backendHost = "https://cf-server-xyq1.onrender.com";
+const backendHost = "https://clusterfilm-server.vercel.app";
 
 const findUser = async (email) => {
   return await axios.get(`${backendHost}/user/${email}`).then((resp) => {

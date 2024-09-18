@@ -1,6 +1,6 @@
 const axios = require("axios");
 
-const backendHost = "https://cf-server-xyq1.onrender.com/cluster";
+const backendHost = "https://clusterfilm-server.vercel.app/cluster";
 
 export const cluster = {
   find: async function (email) {
